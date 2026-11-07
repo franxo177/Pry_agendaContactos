@@ -2,19 +2,15 @@ package io.github.franxo177.pry_agendacontactos.model;
 
 //atributos que tendra el contacto
 public class Contacto {
-    private String id,nombre, apellido, telefono;
+    private String nombre, apellido, telefono;
 
     //constructor con sus setters validados
-    private Contacto(String id, String nombre, String apellido, String telefono) {
-        setId(id);
+    private Contacto(String nombre, String apellido, String telefono) {
         setNombre(nombre);
         setApellido(apellido);
         setTelefono(telefono);
     }
 
-    public String getId() {
-        return id;
-    }
 
     public String getNombre() {
         return nombre;
@@ -28,12 +24,6 @@ public class Contacto {
         return telefono;
     }
 
-    private void setId(String id) {
-        if(id == null || id.isBlank()) {
-            throw new IllegalArgumentException("La ID no puede quedar vacia");
-        }
-        this.id = id;
-    }
 
     private void setNombre(String nombre) {
         if(nombre == null || nombre.isBlank()) {

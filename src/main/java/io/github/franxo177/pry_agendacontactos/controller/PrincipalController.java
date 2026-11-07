@@ -7,8 +7,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class PrincipalController {
-    @FXML
-    private TextField txtId;
+
     @FXML
     private TextField txtNombre;
     @FXML
@@ -17,8 +16,7 @@ public class PrincipalController {
     private TextField txtTelefono;
     @FXML
     private TableView tablaContactos;
-    @FXML
-    private TableColumn colId;
+
     @FXML
     private TableColumn colNombre;
     @FXML

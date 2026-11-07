@@ -23,14 +23,14 @@ public class ElementoRepository {
 
     public void agregar(Contacto nuevo) {
         for (Contacto e : listar())
-            if (e.getId().equalsIgnoreCase(nuevo.getId()))
-                throw new IllegalArgumentException("ID duplicado");
+            if (e.getTelefono().equalsIgnoreCase(nuevo.getTelefono()))
+                throw new IllegalArgumentException("Telefono ya en contactos");
         elementosA.add(nuevo);
         daoA.guardar(elementosA);
     }
 
-    public void eliminar(String id) {
-        if(elementosA.removeIf(x -> x.getId().equalsIgnoreCase(id))) {
+    public void eliminar(String telefono) {
+        if(elementosA.removeIf(x -> x.getTelefono().equalsIgnoreCase(telefono))) {
             daoA.guardar(elementosA);
             return;
         } throw new IllegalArgumentException("Registro no encontrado");
