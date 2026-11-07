@@ -5,7 +5,7 @@ public class Contacto {
     private String nombre, apellido, telefono;
 
     //constructor con sus setters validados
-    private Contacto(String nombre, String apellido, String telefono) {
+    public Contacto(String nombre, String apellido, String telefono) {
         setNombre(nombre);
         setApellido(apellido);
         setTelefono(telefono);

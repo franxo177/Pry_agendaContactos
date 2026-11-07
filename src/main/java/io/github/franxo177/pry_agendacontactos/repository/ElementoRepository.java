@@ -11,7 +11,7 @@ public class ElementoRepository {
     private final ElementoDao<Contacto> daoA = new JsonElementoDao<>("data/contactos.json", Contacto.class);
     private final List<Contacto> elementosA = new ArrayList<>();
 
-    private ElementoRepository() {
+    public ElementoRepository() {
         elementosA.addAll(daoA.cargar());
     }
 
