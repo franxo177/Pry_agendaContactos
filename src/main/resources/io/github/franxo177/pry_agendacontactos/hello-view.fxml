@@ -1,16 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="io.github.franxo177.pry_agendacontactos.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<AnchorPane fx:controller="io.github.franxo177.pry_agendacontactos.controller.PrincipalController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+   <children>
+      <Label layoutX="26.0" layoutY="17.0" text="Agenda Contactos">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="37.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.54" topOpacity="0.45" />
+         </effect>
+      </Label>
+      <Label layoutX="35.0" layoutY="150.0" text="ID">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="200.0" text="Nombre">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="250.0" text="Apellido">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="300.0" text="Telefono">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtId" layoutX="130.0" layoutY="145.0" />
+      <TextField fx:id="txtNombre" layoutX="130.0" layoutY="195.0" />
+      <TextField fx:id="txtApellido" layoutX="130.0" layoutY="245.0" />
+      <TextField fx:id="txtTelefono" layoutX="130.0" layoutY="295.0" />
+      <Button fx:id="btnAgregar" layoutX="175.0" layoutY="360.0" mnemonicParsing="false" onAction="#agregar" text="Agregar" />
+      <TableView fx:id="tablaContactos" layoutX="450.0" layoutY="130.0" prefHeight="250.0" prefWidth="400.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="70.0" text="ID" />
+          <TableColumn fx:id="colNombre" prefWidth="100.0" text="NOMBRE" />
+            <TableColumn fx:id="colApellido" prefWidth="100.0" text="APELLIDO" />
+            <TableColumn fx:id="colTelefono" prefWidth="130.0" text="TELEFONO" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnEliminar" layoutX="620.0" layoutY="400.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+   </children>
+</AnchorPane>
