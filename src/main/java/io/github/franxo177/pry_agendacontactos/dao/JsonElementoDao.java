@@ -18,7 +18,7 @@ public class JsonElementoDao<T> implements ElementoDao<T> {
     private final Type tipoLista;
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-    private JsonElementoDao(String ruta, Class<T> tipo) {
+    public JsonElementoDao(String ruta, Class<T> tipo) {
         archivo = Path.of(ruta);
         tipoLista = TypeToken.getParameterized(List.class, tipo).getType();
     }

@@ -12,19 +12,19 @@ public class Contacto {
         setTelefono(telefono);
     }
 
-    private String getId() {
+    public String getId() {
         return id;
     }
 
-    private String getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    private String getApellido() {
+    public String getApellido() {
         return apellido;
     }
 
-    private String getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
